@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100;0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,100;1,9..40,400;1,9..40,500;1,9..40,700&family=Plus+Jakarta+Sans:wght@200;400;700&family=Quicksand:wght@300&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+  user-select: none;
+}
+
+:root {
+  --nav-height: 4rem;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+nav {
+  justify-content: space-between;
+  border-bottom: 1px solid gainsboro;
+  height: var(--nav-height);
+  padding: 0 2rem;
+}
+
+nav .logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+nav .nav-button {
+  gap: 1.5rem;
+}
