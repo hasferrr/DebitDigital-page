@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100;0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,100;1,9..40,400;1,9..40,500;1,9..40,700&family=Plus+Jakarta+Sans:wght@200;400;700&family=Quicksand:wght@300&display=swap');
 
+:root {
+  --nav-height: 4rem;
+  --padding: 5rem;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -12,8 +17,19 @@ a {
   user-select: none;
 }
 
-:root {
-  --nav-height: 4rem;
+button {
+  outline: none;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  margin: 0;
+  font-family: inherit;
+  font-size: 1rem;
+  background-color: inherit;
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 body {
@@ -23,13 +39,14 @@ body {
 .flex {
   display: flex;
   align-items: center;
+  gap: 1rem;
 }
 
 nav {
   justify-content: space-between;
   border-bottom: 1px solid gainsboro;
   height: var(--nav-height);
-  padding: 0 2rem;
+  padding: 0 var(--padding);
 }
 
 nav .logo {
@@ -39,4 +56,43 @@ nav .logo {
 
 nav .nav-button {
   gap: 1.5rem;
+}
+
+main {
+  padding: 0 var(--padding);
+}
+
+.article-1 {
+  justify-content: space-between;
+  height: calc(100vh - var(--nav-height));
+  gap: 4rem;
+  --image-width: 60vw;
+}
+
+.article-1 * {
+  font-size: 1.2rem;
+}
+
+.article-1 .title {
+  flex-direction: column;
+  width: calc(100vw - var(--image-width));
+  gap: 2rem;
+}
+
+.article-1 .card-img {
+  background-image: url(images/cards.jpg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  height: 60vh;
+  width: var(--image-width);
+}
+
+.article-1 h1 {
+  font-size: 3.5rem;
+}
+
+.article-1 .daftar {
+  color: white;
+  background-color: black;
 }
