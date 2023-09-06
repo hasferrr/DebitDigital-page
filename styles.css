@@ -43,11 +43,18 @@ body {
   gap: 1rem;
 }
 
+header {
+  display: inline;
+}
+
 nav {
   justify-content: space-between;
   border-bottom: 1px solid gainsboro;
   height: var(--nav-height);
   padding: 0 var(--padding);
+  position: sticky;
+  top: 0;
+  background-color: white;
 }
 
 nav .logo {
