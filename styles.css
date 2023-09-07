@@ -89,7 +89,7 @@ nav .nav-button {
   gap: 1.5rem;
 }
 
-main>#content>article:not(.article-testimoni) {
+main>#content>article:not(.article-testimoni):not(.article-daftar) {
   margin: 0 var(--padding);
 }
 
@@ -353,6 +353,7 @@ button:active,
   zoom: 190%;
 }
 
+.article-daftar,
 .article-testimoni {
   background-color: whitesmoke;
 }
