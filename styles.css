@@ -86,6 +86,7 @@ header {
 }
 
 nav {
+  display: flex;
   justify-content: space-between;
   border-bottom: 1px solid gainsboro;
   height: var(--nav-height);
@@ -95,6 +96,48 @@ nav {
   background-color: var(--global-bg-color);
   z-index: 999;
   box-shadow: var(--light-shadow);
+}
+
+.hamburger {
+  display: none;
+  background-image: url(images/icons/hamburger-menu.svg);
+  background-size: cover;
+  background-position: center;
+  width: 2rem;
+  height: 2rem;
+  color: black;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+  nav {
+    padding: 0 calc(var(--padding) / 3);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  nav {
+    height: max-content;
+    padding: 1rem calc(var(--padding) / 3);
+    flex-direction: column;
+  }
+
+  nav ul.nav-button:last-child {
+    padding-top: 2rem;
+  }
+
+  nav .nav-button {
+    flex-direction: column;
+  }
+
+  nav>div.flex {
+    align-items: normal;
+    justify-content: space-between;
+  }
+
+  .hamburger {
+    display: block;
+  }
 }
 
 nav .logo {
@@ -478,7 +521,7 @@ footer li {
 
 .darken {
   position: fixed;
-  background-color: rgba(0,0,0,.3);
+  background-color: rgba(0, 0, 0, .3);
   height: 100%;
   width: 100%;
   top: 0;
