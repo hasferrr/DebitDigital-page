@@ -4,6 +4,7 @@
   --nav-height: 4rem;
   --padding: 5rem;
   --global-bg-color: white;
+  --100vh-minus-nav: calc(100vh - var(--nav-height));
 }
 
 * {
@@ -94,7 +95,7 @@ main {
 
 .article-1 {
   justify-content: space-between;
-  height: calc(100vh - var(--nav-height));
+  height: var(--100vh-minus-nav);
   gap: 4rem;
   --image-width: 60vw;
 }
@@ -127,7 +128,7 @@ main {
 }
 
 .article-deskripsi {
-  height: calc(100vh - var(--nav-height));
+  height: var(--100vh-minus-nav);
   justify-content: center;
   padding: 4rem;
   gap: 5rem;
@@ -162,7 +163,7 @@ main {
 }
 
 .article-fitur {
-  height: calc(100vh - var(--nav-height));
+  height: var(--100vh-minus-nav);
   text-align: center;
 }
 
@@ -173,6 +174,7 @@ main {
 .cards {
   justify-content: center;
   gap: 2rem;
+  flex-wrap: wrap;
 }
 
 .card {
@@ -206,4 +208,32 @@ button:active,
 
 .article-misi p {
   font-size: 1.1rem;
+}
+
+.article-keunggulan {
+  height: max(var(--100vh-minus-nav), max-content);
+}
+
+.article-keunggulan h1 {
+  margin-bottom: 2rem;
+}
+
+.article-keunggulan p {
+  font-size: 1.1rem;
+}
+
+.article-keunggulan,
+.article-keunggulan>div.flex {
+  gap: 2rem;
+}
+
+.article-keunggulan>div.flex section {
+  height: 18rem;
+  width: 25rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+.article-keunggulan>div.flex section h2 {
+  padding-bottom: 2rem;
 }
