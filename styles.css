@@ -64,6 +64,12 @@ body {
   padding-bottom: var(--padding);
 }
 
+.btn-black {
+  color: white;
+  background-color: black;
+  font-size: 1.2rem;
+}
+
 header {
   display: inline;
 }
@@ -111,6 +117,7 @@ main>#content>article:not(.article-testimoni):not(.article-daftar) {
 .article-1 .title {
   width: calc(100vw - var(--image-width));
   gap: 2rem;
+  align-items: start;
 }
 
 .article-1 .card-img {
@@ -120,11 +127,6 @@ main>#content>article:not(.article-testimoni):not(.article-daftar) {
   border-radius: 20px;
   height: 60vh;
   width: var(--image-width);
-}
-
-.article-1 .buttons>button:last-child {
-  color: white;
-  background-color: black;
 }
 
 .article-deskripsi {
