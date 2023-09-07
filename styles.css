@@ -388,3 +388,36 @@ button:active,
   height: 9rem;
   font-size: 1.1rem;
 }
+
+footer {
+  color: white;
+  background-color: black;
+  padding: var(--padding) calc(var(--padding) / 3);
+  display: flex;
+  justify-content: space-evenly;
+  gap: 2rem;
+}
+
+footer>div.flex {
+  align-items: flex-start;
+}
+
+footer input[type=email] {
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  width: 16rem;
+  height: 3rem;
+  font-size: 1.1rem;
+}
+
+footer ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+footer li {
+  font-size: 1.1rem;
+}
