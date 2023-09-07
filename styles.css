@@ -144,7 +144,7 @@ main {
 .bg-grey {
   z-index: 0;
   position: absolute;
-  background-color: rgba(245, 245, 245, 0.4);
+  background-color: rgba(245, 245, 245, 0.45);
   width: 90%;
   height: 80%;
   border-radius: 50px;
