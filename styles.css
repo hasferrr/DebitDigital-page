@@ -272,7 +272,7 @@ button:active,
   height: var(--bg-card-height);
   background: rgb(237, 252, 140);
   background: linear-gradient(90deg, rgba(237, 252, 140, 1) 0%, rgba(229, 243, 170, 1) 35%, rgba(219, 233, 209, 1) 100%);
-  border-radius: var(--bg-card-height) var(--bg-card-radius) var(--bg-card-radius) var(--bg-card-height);
+  border-radius: var(--bg-card-height) calc(var(--bg-card-radius) + 20px) calc(var(--bg-card-radius) + 20px) var(--bg-card-height);
   position: absolute;
   right: 0;
   top: 0;
