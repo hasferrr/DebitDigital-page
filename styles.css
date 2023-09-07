@@ -4,8 +4,7 @@
   --nav-height: 4rem;
   --padding: 5rem;
   --global-bg-color: white;
-  --100vh-minus-nav: calc(100vh - var(--nav-height));
-  --100vh-minus-nav-dynamic: max(var(--100vh-minus-nav), max-content);
+  --light-shadow: 0px 2px 5px rgba(0, 0, 0, 0.075);
 }
 
 * {
@@ -78,7 +77,7 @@ nav {
   top: 0;
   background-color: var(--global-bg-color);
   z-index: 999;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.03);
+  box-shadow: var(--light-shadow);
 }
 
 nav .logo {
@@ -90,13 +89,13 @@ nav .nav-button {
   gap: 1.5rem;
 }
 
-main {
-  padding: 0 var(--padding);
+main>#content>article:not(.article-testimoni) {
+  margin: 0 var(--padding);
 }
 
 .article-1 {
   justify-content: space-between;
-  height: var(--100vh-minus-nav);
+  height: calc(100vh - var(--nav-height));
   gap: 4rem;
   --image-width: 60vw;
 }
@@ -129,7 +128,6 @@ main {
 }
 
 .article-deskripsi {
-  height: var(--100vh-minus-nav-dynamic);
   justify-content: center;
   padding: var(--padding);
   gap: 5rem;
@@ -151,7 +149,7 @@ main {
   height: 80%;
   border-radius: 50px;
   border: 1px solid whitesmoke;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.075);
+  box-shadow: var(--light-shadow);
 }
 
 .article-deskripsi .digital-pay-img {
@@ -164,7 +162,6 @@ main {
 }
 
 .article-fitur {
-  height: var(--100vh-minus-nav-dynamic);
   text-align: center;
 }
 
@@ -184,7 +181,7 @@ main {
   border-radius: 10px;
   border: 1px solid whitesmoke;
   background-color: white;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.075);
+  box-shadow: var(--light-shadow);
   padding: calc(var(--padding) / 2);
   width: 22rem;
   height: 20rem;
@@ -208,11 +205,7 @@ button:active,
 }
 
 .article-misi p {
-  font-size: 1.1rem;
-}
-
-.article-keunggulan {
-  height: var(--100vh-minus-nav-dynamic);
+  font-size: 1.2rem;
 }
 
 .article-keunggulan h1 {
@@ -279,7 +272,6 @@ button:active,
 }
 
 .article-harga {
-  height: var(--100vh-minus-nav-dynamic);
   justify-content: center;
   align-items: center;
 }
@@ -343,6 +335,14 @@ button:active,
   padding-right: 4px;
 }
 
+.circle-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.circle-btn:active {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
 .arrow-btn {
   border: solid white;
   border-width: 0 3px 3px 0;
@@ -351,4 +351,39 @@ button:active,
   transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
   zoom: 190%;
+}
+
+.article-testimoni {
+  background-color: whitesmoke;
+}
+
+.article-testimoni .card {
+  height: 25rem;
+  background-color: white;
+  border-radius: 40px;
+  gap: 2rem;
+}
+
+.article-testimoni .card img {
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  border: 1px solid whitesmoke;
+  object-fit: cover;
+  filter: grayscale(80%);
+}
+
+.article-testimoni .card h2 {
+  font-size: 1.2rem;
+}
+
+.article-testimoni .card h2+p {
+  font-size: 1rem;
+  color: gray;
+  text-align: left;
+}
+
+.article-testimoni .card>div.flex:last-child {
+  height: 9rem;
+  font-size: 1.1rem;
 }
