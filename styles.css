@@ -218,8 +218,11 @@ main>#content>article:not(.article-testimoni):not(.article-daftar) {
 
 .article-deskripsi {
   justify-content: center;
-  padding: var(--padding);
+  padding: 4rem;
   gap: 5rem;
+  background-color: whitesmoke;
+  border-radius: 50px;
+  box-shadow: var(--light-shadow);
 }
 
 .article-deskripsi * {
@@ -230,17 +233,6 @@ main>#content>article:not(.article-testimoni):not(.article-daftar) {
   font-size: 1.2rem;
 }
 
-.bg-grey {
-  z-index: 0;
-  position: absolute;
-  background-color: rgba(245, 245, 245, 0.45);
-  width: 90%;
-  height: 80%;
-  border-radius: 50px;
-  border: 1px solid whitesmoke;
-  box-shadow: var(--light-shadow);
-}
-
 .article-deskripsi .digital-pay-img {
   background-image: url(images/digital-payment.jpg);
   background-size: cover;
@@ -248,6 +240,12 @@ main>#content>article:not(.article-testimoni):not(.article-daftar) {
   border-radius: 20px;
   height: 55vh;
   width: 190rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .article-deskripsi .title p {
+    font-size: 1.1rem;
+  }
 }
 
 .article-fitur {
@@ -273,7 +271,6 @@ main>#content>article:not(.article-testimoni):not(.article-daftar) {
   box-shadow: var(--light-shadow);
   padding: calc(var(--padding) / 2);
   width: 22rem;
-  height: 20rem;
   background-color: rgba(245, 245, 245, 0.2);
 }
 
