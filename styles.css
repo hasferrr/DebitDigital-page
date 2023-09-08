@@ -284,7 +284,7 @@ main>#content>article:not(.article-testimoni):not(.article-daftar) {
   padding-bottom: var(--padding);
   position: relative;
   --bg-card-radius: 30px;
-  --bg-card-width: 55rem;
+  --bg-card-width: min(90%, 55rem);
   --bg-card-height: 25rem;
 }
 
@@ -318,6 +318,71 @@ main>#content>article:not(.article-testimoni):not(.article-daftar) {
   position: absolute;
   right: 0;
   top: 0;
+}
+
+@media screen and (max-width: 900px) {
+  .bg-for-daftar-card h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .bg-for-daftar-card h1 {
+    font-size: 1.3rem;
+  }
+
+  .bg-for-daftar-card img {
+    zoom: 75%;
+  }
+
+  .bg-for-daftar-card {
+    gap: 1rem;
+  }
+
+  .oval {
+    z-index: -1;
+    width: 100%;
+    height: 3rem;
+    background: rgb(237, 252, 140);
+    background: linear-gradient(90deg, rgba(237, 252, 140, 1) 0%, rgba(229, 243, 170, 1) 35%, rgba(219, 233, 209, 1) 100%);
+    border-radius: 0 0 var(--bg-card-radius) var(--bg-card-radius);
+    position: absolute;
+    right: 0;
+    top: calc(100% - 3rem);
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .bg-for-daftar-card {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    text-align: center;
+    padding-bottom: calc(var(--padding) + 3rem);
+  }
+
+  .bg-for-daftar-card img {
+    zoom: 60%;
+    order: 1;
+  }
+
+  .bg-for-daftar-card .text {
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    order: 2;
+  }
+}
+
+@media screen and (max-width: 436px) {
+  .bg-for-daftar-card {
+    height: 80vh;
+  }
+
+  .bg-for-daftar-card img {
+    zoom: 40%;
+  }
 }
 
 .article-harga {
