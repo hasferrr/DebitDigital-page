@@ -542,7 +542,7 @@ footer {
   padding: var(--padding) calc(var(--padding) / 3);
   display: flex;
   justify-content: space-evenly;
-  gap: 2rem;
+  gap: 5rem;
 }
 
 footer>div.flex {
@@ -559,10 +559,33 @@ footer input[type=email] {
   font-size: 1.1rem;
 }
 
+@media screen and (max-width: 800px) {
+  footer {
+    flex-direction: column;
+    padding: var(--padding);
+  }
+}
+
+@media screen and (max-width: 400px) {
+  footer {
+    padding: 2rem;
+  }
+
+  footer input[type=email] {
+    width: 40vh;
+    font-size: .9rem;
+  }
+}
+
 footer ul {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+}
+
+footer .ul-groups {
+  gap: 4rem;
+  flex-wrap: wrap;
 }
 
 footer li {
