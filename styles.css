@@ -153,6 +153,12 @@ main>#content>article:not(.article-testimoni):not(.article-daftar) {
   margin: 0 var(--padding);
 }
 
+@media screen and (max-width: 500px) {
+  main>#content>article:not(.article-testimoni):not(.article-daftar) {
+    margin: 0 2rem;
+  }
+}
+
 .article-1 {
   justify-content: space-between;
   height: calc(100vh - var(--nav-height));
@@ -221,7 +227,7 @@ main>#content>article:not(.article-testimoni):not(.article-daftar) {
   padding: 4rem;
   gap: 5rem;
   background-color: whitesmoke;
-  border-radius: 50px;
+  border-radius: 30px;
   box-shadow: var(--light-shadow);
 }
 
@@ -245,6 +251,25 @@ main>#content>article:not(.article-testimoni):not(.article-daftar) {
 @media screen and (max-width: 1000px) {
   .article-deskripsi .title p {
     font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .article-deskripsi {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2.5rem;
+  }
+
+  .article-deskripsi h1 {
+    font-size: 1.5rem;
+  }
+
+  article.article-deskripsi .pay-using-phone,
+  article.article-deskripsi .digital-pay-img {
+    order: -1;
+    height: 20%;
+    width: 100%;
   }
 }
 
