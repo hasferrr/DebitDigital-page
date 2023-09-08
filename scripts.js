@@ -1,3 +1,5 @@
+const hamburger = document.querySelector('.hamburger')
+
 const sideBarProfile = () => {
   const asideBtn = document.querySelector('.aside-btn')
   const sideProfile = document.querySelector('.side-profile')
@@ -18,11 +20,10 @@ const sideBarProfile = () => {
 
 const hamburgerHandler = () => {
   const navigationButton = document.querySelectorAll('.nav-button')
-  const hamburger = document.querySelector('.hamburger')
 
   hamburger.addEventListener('click', () => {
-    navigationButton.forEach((ul) => {
-      ul.style.display = ul.style.display === 'none' || '' ? 'flex' : 'none';
+    navigationButton.forEach(ul => {
+      ul.style.display = ul.style.display === 'none' || '' ? 'flex' : 'none'
     })
   })
 
@@ -43,5 +44,16 @@ const hamburgerHandler = () => {
 
 }
 
+const clickNavBarAndCloseIt = () => {
+  const as = document.querySelectorAll('.li-nav-btn')
+
+  as.forEach(a => a.addEventListener('click', () => {
+    if (window.innerWidth <= 900) {
+      hamburger.click()
+    }
+  }))
+}
+
 sideBarProfile()
 hamburgerHandler()
+clickNavBarAndCloseIt()
