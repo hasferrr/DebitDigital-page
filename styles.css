@@ -203,7 +203,6 @@ main>#content>article:not(.article-testimoni):not(.article-daftar) {
   main article.article-1 {
     display: flex;
     flex-direction: column;
-    margin: 0;
   }
 
   .article-1 .title {
@@ -218,6 +217,12 @@ main>#content>article:not(.article-testimoni):not(.article-daftar) {
     border-radius: 0;
     order: 0;
     box-shadow: none;
+  }
+}
+
+@media screen and (max-width: 435px) {
+  main article.article-1 {
+    height: 100vh;
   }
 }
 
@@ -299,6 +304,12 @@ main>#content>article:not(.article-testimoni):not(.article-daftar) {
   background-color: rgba(245, 245, 245, 0.2);
 }
 
+@media screen and (max-width: 375px) {
+  .card {
+    width: 310px;
+  }
+}
+
 .article-misi .pay-using-phone {
   background-image: url(images/pay-using-phone.jpg);
   background-size: cover;
@@ -327,7 +338,6 @@ main>#content>article:not(.article-testimoni):not(.article-daftar) {
 
 .article-keunggulan>div.flex section {
   height: 15rem;
-  width: 25rem;
 }
 
 .article-keunggulan>div.flex section h2 {
@@ -627,6 +637,12 @@ footer li {
   border: 1px solid whitesmoke;
   border-left: 0;
   cursor: pointer;
+}
+
+@media screen and (max-width: 452px) {
+  .aside-btn {
+    width: 1rem;
+  }
 }
 
 .side-profile {
