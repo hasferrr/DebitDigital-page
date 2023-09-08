@@ -168,6 +168,16 @@ main>#content>article:not(.article-testimoni):not(.article-daftar) {
   font-size: 2.75rem;
 }
 
+.article-1 button {
+  width: 8.7rem;
+}
+
+@media screen and (max-width: 955px) {
+  .article-1 h1 {
+    font-size: 2.2rem;
+  }
+}
+
 .article-1 .title {
   width: calc(100vw - var(--image-width));
   gap: 2rem;
@@ -182,6 +192,29 @@ main>#content>article:not(.article-testimoni):not(.article-daftar) {
   height: 60vh;
   width: var(--image-width);
 }
+
+@media screen and (max-width: 768px) {
+  main article.article-1 {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .article-1 .title {
+    width: unset;
+    height: 80vh;
+    order: 1;
+  }
+
+  .article-1 .card-img {
+    height: 10vh;
+    width: 100vw;
+    border-radius: 0;
+    order: 0;
+    box-shadow: none;
+  }
+}
+
 
 .article-deskripsi {
   justify-content: center;
