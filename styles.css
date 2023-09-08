@@ -122,6 +122,10 @@ nav {
     flex-direction: column;
   }
 
+  nav ul.nav-button {
+    padding-top: 1.25rem;
+  }
+
   nav ul.nav-button:last-child {
     padding-top: 2rem;
   }
@@ -207,12 +211,12 @@ main>#content>article:not(.article-testimoni):not(.article-daftar) {
 
   .article-1 .title {
     width: unset;
-    height: 80vh;
+    padding-bottom: 5rem;
     order: 1;
   }
 
   .article-1 .card-img {
-    height: 10vh;
+    height: 20vh;
     width: 100vw;
     border-radius: 0;
     order: 0;
@@ -222,7 +226,7 @@ main>#content>article:not(.article-testimoni):not(.article-daftar) {
 
 @media screen and (max-width: 435px) {
   main article.article-1 {
-    height: 100vh;
+    height: max-content;
   }
 }
 
